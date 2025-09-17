@@ -35,10 +35,24 @@ services:
     networks:
       - nifi_network
 
+  minio:
+    image: minio/minio:latest
+    command: server /data --console-address ":9001"
+    ports:
+      - "9000:9000"  # S3 API
+      - "9001:9001"  # MinIO console
+    environment:
+      MINIO_ROOT_USER: minio
+      MINIO_ROOT_PASSWORD: minio123
+    volumes:
+      - minio_data:/data
+    networks:
+      - nifi_network
 volumes:
   nifi_data:
   postgres_data:
   pgadmin_data:
+  minio_data:
 
 networks:
   nifi_network:
