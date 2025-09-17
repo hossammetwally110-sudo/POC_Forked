@@ -9,7 +9,7 @@ services:
     NIFI_WEB_HTTPS_PORT: "8443"
     NIFI_WEB_HTTPS_HOST: "0.0.0.0"
     SINGLE_USER_CREDENTIALS_USERNAME: admin
-    SINGLE_USER_CREDENTIALS_PASSWORD: "ChangeMe_123!"
+    SINGLE_USER_CREDENTIALS_PASSWORD: "admin"
     NIFI_SENSITIVE_PROPS_KEY: "someLongRandomString"
   volumes:
     - nifi_data:/opt/nifi/nifi-current/data
