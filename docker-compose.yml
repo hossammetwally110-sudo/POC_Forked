@@ -48,12 +48,11 @@ services:
       - minio_data:/data
     networks:
       - nifi_network
-
-
 volumes:
   nifi_data:
   postgres_data:
   pgadmin_data:
+  minio_data:
 
 networks:
   nifi_network:
